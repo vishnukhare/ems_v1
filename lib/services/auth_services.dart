@@ -10,6 +10,7 @@ class AuthService {
       await _auth.verifyPhoneNumber(
         phoneNumber: phoneNumber,
         timeout: const Duration(minutes: 2 ),
+        // 
         verificationCompleted: (PhoneAuthCredential credential) async {
           // Auto-verification if possible (usually on Android)
           await _auth.signInWithCredential(credential);
